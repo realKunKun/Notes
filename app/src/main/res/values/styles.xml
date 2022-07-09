@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="countView">
+        <attr name="outer_color" format="color"/>
+        <attr name="inner_color" format="color"/>
+        <attr name="borderWith" format="dimension"/>
+        <attr name="step_text_color" format="color"/>
+        <attr name="step_text_size" format="dimension"/>
+    </declare-styleable>
+    <!-- Define a global style for AboutPage in your 'styles.xml' -->
+    <style name="Widget.App.AboutPage" parent="about_About">
+        <item name="aboutBackground">#ffffff</item>
+        <item name="aboutElementIconTint">#333333</item>
+        <item name="aboutSeparatorColor">#999999</item>
+        <item name="aboutDescriptionTextAppearance">@style/TextAppearance.App.AboutPage.Description</item>
+
+        <!-- similarly, you can also apply the following text appearances -->
+        <item name="aboutElementTextAppearance">@style/about_elementTextAppearance.Dark</item>
+        <item name="aboutGroupTextAppearance">@style/about_groupTextAppearance</item>
+    </style>
+
+    <style name="TextAppearance.App.AboutPage.Description" parent="about_descriptionTextAppearance.Dark">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+</resources>

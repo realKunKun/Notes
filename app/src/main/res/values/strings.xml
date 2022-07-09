@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="add_start">All you need to do firstly is take a photo</string>
+    <string name="auto">(Auto Create)</string>
+    <string name="appearance">Appearance</string>
+    <string name="place">Where it be placed</string>
+    <string name="tag">TAG MANAGER</string>
+    <string name="classification">Classification</string>
+    <string name="set">Setting</string>
+</resources>
