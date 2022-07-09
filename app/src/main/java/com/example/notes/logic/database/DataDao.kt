@@ -4,15 +4,9 @@ import androidx.room.*
 
 @Dao
 interface DataDao {
-    @Query("SELECT noteName from localNote where noteName=(:name)")
-    fun getNovel(name:String):String
+    @Query("SELECT * from localNote")
+    fun getNotes():MutableList<NoteEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNovel(novelEntity: NoteEntity)
-
-    @Delete
-    fun deleteNovel(novelEntity: NoteEntity)
-
-    @Update
-    fun updateNovel(novelEntity: NoteEntity)
+    fun insertNotes(novelEntity: NoteEntity)
 }

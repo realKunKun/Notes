@@ -31,6 +31,7 @@ class MainViewModel(activity: Activity):ViewModel() {
             setData()
             liveTagData.value=tag
         }
+        repository.local(activity = activity,0)
     }
     fun setData(){
         thread {
@@ -51,4 +52,5 @@ class MainViewModel(activity: Activity):ViewModel() {
 
         return 0
     }
+
 }

@@ -6,6 +6,9 @@ import com.example.notes.logic.model.NoteModel
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
+import androidx.room.Room
+import com.example.notes.logic.ViewModel.TagsViewModel
+import com.example.notes.logic.database.Database
 import com.example.notes.logic.model.OnlyTagModel
 import com.example.notes.logic.model.TagModel
 import com.example.notes.logic.model.UserModel
@@ -264,5 +267,14 @@ class NetRepository() {
             Log.d("MainActivity", "name is ${app.tag}")
         }
         return appList
+    }
+    //数据库
+    fun local(activity: Activity,state:Int){
+        val database= Room.databaseBuilder(activity, Database::class.java,"NovelDataBase").allowMainThreadQueries().build()
+        if (state==1)
+        //noteData = database.dataDao().getNotes()
+        else{
+        //database.dataDao().insertNotes()
+        }
     }
 }
